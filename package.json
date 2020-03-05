@@ -1,0 +1,8 @@
+{
+  "name": "margin-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:0jinxing/margin-page.git",
+  "author": "Jinxing Lin <172601673@qq.com>",
+  "license": "MIT"
+}
