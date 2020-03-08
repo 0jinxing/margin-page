@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Margin page",
+  "description": "A simple record tool",
+  "version": "1.1.0",
+  "permissions": ["storage", "tabs", "management", "<all_urls>"],
+  "browser_action": {
+    "default_icon": "favicon.png"
+  },
+  "icons": {
+    "200": "favicon.png"
+  },
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "content_security_policy": "default-src 'self' 'unsafe-eval' http://127.0.0.1:8080 https://127.0.0.1:8080; connect-src  http://127.0.0.1:8080 https://127.0.0.1:8080 ws://127.0.0.1:8080 wss://127.0.0.1:8080;"
+}
